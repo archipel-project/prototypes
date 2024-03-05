@@ -1,0 +1,9 @@
+[package]
+name = "slp"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+byteorder = "1.4"
+derive_more = "0.99"
+funty = "2.0"
