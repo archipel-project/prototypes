@@ -1,0 +1,9 @@
+[package]
+name = "networking_test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+valence_protocol = "0.2.0-alpha.1+mc.1.20.1"
+anyhow = "1.0.80"
+bytes = "1.5.0"

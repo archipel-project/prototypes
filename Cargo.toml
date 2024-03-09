@@ -3,7 +3,10 @@ version = "0.1.0"
 description = "prototypes"
 
 [workspace]
-members = ["projects/networking/slp-01"]
+members = [
+    "projects/networking/slp-01",
+    "projects/networking/network-handler"
+    ]
 resolver = "2"
 
 [profile.release]
