@@ -5,8 +5,8 @@ use {
     std::{
         error::Error,
         io::{Read, Write},
-        mem
-    }
+        mem,
+    },
 };
 
 pub trait Sizeable: Sized {
@@ -34,7 +34,7 @@ pub enum DecodeError {
     #[display(fmt = "malformed packet")]
     Incomplete,
     #[display(fmt = "item too long")]
-    TooLong
+    TooLong,
 }
 
 impl Error for DecodeError {}

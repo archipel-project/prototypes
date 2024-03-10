@@ -3,16 +3,16 @@ use {
     slp::{
         types::{
             vars::{Var, VarInt},
-            McStr
+            McStr,
         },
-        Codec, DecodeError, EncodeError, Sizeable
+        Codec, DecodeError, EncodeError, Sizeable,
     },
     std::{
         ascii,
         error::Error,
         io::Take,
-        net::{TcpListener, TcpStream}
-    }
+        net::{TcpListener, TcpStream},
+    },
 };
 
 pub trait Encoder: std::io::Write {

@@ -4,7 +4,7 @@ use {
     crate::*,
     derive_more::Deref,
     std::borrow::Cow,
-    vars::{Var, VarInt}
+    vars::{Var, VarInt},
 };
 
 #[derive(Debug, Deref)]

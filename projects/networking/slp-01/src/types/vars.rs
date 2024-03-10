@@ -2,7 +2,7 @@ use {
     crate::*,
     byteorder::{ReadBytesExt, WriteBytesExt},
     funty::Integral,
-    std::io::{Read, Write}
+    std::io::{Read, Write},
 };
 
 #[derive(Debug, Copy, Clone)]
@@ -18,7 +18,7 @@ const SEGMENT_MASK: u8 = CONTINUE_BIT - 1;
 
 impl<I> Codec for Var<I>
 where
-    I: Integral + From<u8>
+    I: Integral + From<u8>,
 {
     fn encode_to(self, mut w: impl Write) -> Result<(), EncodeError> {
         let mut n = self.0.as_u64();
@@ -80,7 +80,7 @@ mod tests {
     #[test]
     fn varlong_to_i32() {
         let v = VarLong::decode_from(
-            [0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01].as_slice()
+            [0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x01].as_slice(),
         )
         .unwrap();
 
@@ -102,9 +102,9 @@ mod tests {
         // 11 bytes
         VarInt::decode_from(
             [
-                0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff
+                0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
             ]
-            .as_slice()
+            .as_slice(),
         )
         .unwrap();
     }
