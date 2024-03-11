@@ -1,0 +1,17 @@
+[package]
+name = "protocol-lib-derive"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+syn = { version = "2", features = ["full"] }
+quote = "1"
+proc-macro2 = "1"
+heck = "0"
+
+[lib]
+name = "protocol_lib_derive"
+path = "src/lib.rs"
+proc-macro = true

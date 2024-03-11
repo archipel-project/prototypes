@@ -1,0 +1,3 @@
+[workspace]
+members = ["protocol-lib-derive", "protocol-lib", "protocol-server"]
+resolver = "2"
